@@ -17,25 +17,30 @@ public class Bruch {
         System.out.println(zaehler + "/" + nenner);
     }
 
-    public static void main(String[] args) {
-
-        int x = 5;
-        double y = 4.4;
-
-        Bruch b1 = new Bruch(1,2);
-
-        b1.zaehler = 0;
-
-        b1.zeigeBruch();
-
-        b1 = null;
-
-        b1 = new Bruch(0,0);
-
-        Bruch b2 = b1;
-
-        String s = "abc";
-
+    public int getZaehler() {
+        return zaehler;
     }
 
+    public static void main(String[] args) {
+
+        Bruch b1 = new Bruch();
+        b1.zaehler = 5;
+        b1.nenner = 10;
+
+        Bruch b2 = b1;
+        b2.zaehler = 0;
+
+        System.out.println(b1.zaehler);
+
+        int x = b1.getZaehler();
+        b1.zeigeBruch();
+
+
+        b1 = null;
+        b2 = null;
+        b1 = new Bruch();
+        b1.zaehler = 4;
+        System.gc();
+
+    }
 }
