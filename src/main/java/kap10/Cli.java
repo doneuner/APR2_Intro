@@ -26,7 +26,7 @@ public class Cli {
             // get value at position
             if (cmd.equals("get")) {
                 int index = Integer.parseInt(parts[1]);
-                System.out.println(zahlen[index]);
+                System.out.println("Wert an Position " + index + " ist: " + zahlen[index]);
             }
 
             // add value at position
@@ -35,6 +35,12 @@ public class Cli {
                 int index = Integer.parseInt(parts[2]);
                 zahlen[index] = value;
             }
+
+            System.out.println("---------------------------");
+            for (int i = 0; i < zahlen.length; i++) {
+                System.out.print(zahlen[i] + " ");
+            }
+            System.out.println();
 
         }while(!input.equals("exit"));
     }
