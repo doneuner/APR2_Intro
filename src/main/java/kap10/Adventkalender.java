@@ -25,6 +25,7 @@ public class Adventkalender {
      */
     private boolean istFensterNummerGueltig(int fensterNummer) {
         // TODO
+        return false;
     }
 
     /**
@@ -58,6 +59,7 @@ public class Adventkalender {
      */
     private boolean istFensterGeoffnet(int fensterNummer) {
         // TODO
+        return false;
     }
 
     /**
