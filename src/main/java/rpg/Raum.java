@@ -4,13 +4,17 @@ import java.util.HashMap;
 
 public class Raum {
 
-    private Spieler spieler;
+    private Spieler gegner;
     private String name;
     private HashMap<String, Raum> tueren;
 
-    public Raum(String name) {
+    public Raum(String name, boolean mitGegner) {
         this.name = name;
         this.tueren = new HashMap<>();
+        // gegner hinzufuegen
+        if (mitGegner) {
+            this.gegner = new Spieler("KI", this); // gegner ist im neuen raum
+        }
     }
 
     public void raumHinzufuegen(Raum raum) {
@@ -25,4 +29,7 @@ public class Raum {
         return tueren;
     }
 
+    public Spieler getGegner() {
+        return gegner;
+    }
 }
